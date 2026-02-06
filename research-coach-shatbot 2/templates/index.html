@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Research Coach</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">RC</div>
+        <div>
+          <h1>Research Coach</h1>
+          <p class="tagline">Plan your research: topic → questions → keywords → search → outline</p>
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <button id="btnHelp" class="btn secondary" type="button">Help</button>
+        <button id="btnExplain" class="btn secondary" type="button" aria-pressed="false">Explain: Off</button>
+      </div>
+    </header>
+
+    <main class="card">
+      <section class="chat" id="chat" aria-live="polite" aria-label="Chat messages"></section>
+
+      <form class="composer" id="form" autocomplete="off">
+        <input
+          id="input"
+          type="text"
+          placeholder="Type a message… (try: set topic: AI in education)"
+          aria-label="Message input"
+        />
+        <button class="btn" type="submit">Send</button>
+      </form>
+
+      <div class="footer">
+        <div class="status" id="status">Session: topic not set</div>
+        <div class="hint">Tip: try “set topic: …” then ask for “keywords” or “outline”.</div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
